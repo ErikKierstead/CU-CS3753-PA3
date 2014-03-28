@@ -206,7 +206,7 @@ int main(int argc, char* argv[]){
 	            exit(EXIT_FAILURE);
             }
             
-            char lsString[MAXFILENAMELENGTH];
+            //char lsString[MAXFILENAMELENGTH];
             //strncpy(lsString, "ls ", MAXFILENAMELENGTH);
             //strncat(lsString, local_inputFilename, MAXFILENAMELENGTH);
             //strncat(lsString, " > output.log", MAXFILENAMELENGTH);
