@@ -46,6 +46,9 @@ rw:
  ./rw <#Bytes to Write to Output File> <Block Size> <Input Filename>
  ./rw <#Bytes to Write to Output File> <Block Size> <Input Filename> <Output Filename>
 
+sudo ./rw-sched 256 128 inputFile.txt outputFile.txt SCHED_OTHER
+
+
 testscript:
  ./testscript
 
