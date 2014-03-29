@@ -46,7 +46,7 @@ rw:
  ./rw <#Bytes to Write to Output File> <Block Size> <Input Filename>
  ./rw <#Bytes to Write to Output File> <Block Size> <Input Filename> <Output Filename>
 
-sudo ./rw-sched 256 128 inputFile.txt outputFile.txt SCHED_OTHER
+sudo ./rw-sched 256 128 inputFile.txt outputFile.txt SCHED_OTHER 
 
 
 testscript:
@@ -54,3 +54,67 @@ testscript:
 
 rr_quantum:
  sudo ./rr_quantum
+
+
+Collected Data:
+---------------------------------------------------
+--------------- PI-SCHED --------------------------
+
+wall=180.74 user=180.48 system=0.05 CPU=99% i-switched=504 v-switched=21
+wall=175.16 user=175.08 system=0.06 CPU=99% i-switched=3 v-switched=23
+wall=171.49 user=171.39 system=0.03 CPU=99% i-switched=51 v-switched=23
+wall=691.14 user=690.24 system=0.12 CPU=99% i-switched=1546 v-switched=81
+wall=684.92 user=684.78 system=0.04 CPU=99% i-switched=3 v-switched=83
+wall=682.75 user=682.63 system=0.02 CPU=99% i-switched=175 v-switched=83
+wall=1766.05 user=1763.35 system=0.52 CPU=99% i-switched=4516 v-switched=201
+
+Wall times: 
+180.74 / 10 = 18.07
+175.16 / 10 = 17.52
+171.49 / 10 = 17.15
+
+.. / 40 =
+17.28
+17.12
+17.07
+
+.. / 100 = 
+1766.05 / 100 = 17.67
+1786.18 / 100 = 17.86
+--------------------------------------------------------------------
+---------------------------RW---------------------------------------
+
+
+1024+0 records in
+1024+0 records out
+1048576 bytes (1.0 MB) copied, 0.358008 s, 2.9 MB/s
+wall=7.57 user=0.02 system=0.47 CPU=6% i-switched=22 v-switched=2039
+wall=6.54 user=0.01 system=0.05 CPU=1% i-switched=3 v-switched=1072
+wall=6.40 user=0.00 system=0.10 CPU=1% i-switched=5 v-switched=1168
+1024+0 records in
+1024+0 records out
+1048576 bytes (1.0 MB) copied, 0.356627 s, 2.9 MB/s
+wall=28.41 user=0.07 system=2.11 CPU=7% i-switched=185 v-switched=7965
+wall=28.10 user=0.04 system=2.48 CPU=8% i-switched=3 v-switched=8233
+wall=27.46 user=0.04 system=2.20 CPU=8% i-switched=2 v-switched=8236
+1024+0 records in
+1024+0 records out
+1048576 bytes (1.0 MB) copied, 0.362723 s, 2.9 MB/s
+wall=72.65 user=0.24 system=5.52 CPU=7% i-switched=461 v-switched=19910
+wall=69.33 user=0.06 system=5.68 CPU=8% i-switched=7 v-switched=20585
+wall=64.38 user=0.06 system=0.62 CPU=1% i-switched=4 v-switched=10680
+
+-------------------------------------------------------------
+----------------- HYBRID ------------------------------------
+
+
+wall=168.78 user=168.50 system=0.09 CPU=99% i-switched=393 v-switched=21
+wall=167.81 user=167.76 system=0.02 CPU=99% i-switched=2 v-switched=23
+wall=169.27 user=169.14 system=0.09 CPU=99% i-switched=73 v-switched=23
+wall=674.01 user=672.99 system=0.21 CPU=99% i-switched=1527 v-switched=81
+wall=679.93 user=679.59 system=0.23 CPU=99% i-switched=2 v-switched=84
+wall=681.78 user=681.45 system=0.23 CPU=99% i-switched=263 v-switched=83
+wall=1721.60 user=1718.77 system=0.50 CPU=99% i-switched=4611 v-switched=200
+wall=1689.29 user=1688.58 system=0.48 CPU=99% i-switched=5 v-switched=203
+wall=1714.20 user=1713.46 system=0.52 CPU=99% i-switched=436 v-switched=203
+
